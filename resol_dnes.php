@@ -2,8 +2,8 @@
 //error_reporting(0);
 //require_once ('jpgraph/jpgraph.php');
 //require_once ('jpgraph/jpgraph_line.php');
-include ("jpgraph/src/jpgraph.php");
-include ("jpgraph/src/jpgraph_line.php");
+include ("./jpgraph/src/jpgraph.php");
+include ("./jpgraph/src/jpgraph_line.php");
 //include ("jpgraph/jpgraph_utils.inc");
 
 for($c=1; $c<1475; $c++){
