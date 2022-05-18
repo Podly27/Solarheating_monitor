@@ -1,0 +1,10 @@
+$handle=opendir($directory);
+echo '<ul>';
+while (false!==($name = readdir($handle))) {
+	if (fnmatch('*.log', $name)) {
+		echo '<li><a href="/graph.php?file='. $name.'">'.$name.'</a></li>';
+	}
+}
+closedir($handle);
+echo '</ul>';
+
