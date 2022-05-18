@@ -22,7 +22,7 @@ for($c=1; $c<1475; $c++){
 
 $count = 0;
 
-if (( $soubor = fopen ( "./logs/textdata_20110521.log" , "r" )) !== FALSE ) {
+if (( $soubor = fopen ( "./logs/textdata_20220517.log" , "r" )) !== FALSE ) {
 fgets ( $soubor , 8192 );
 
 while (( $data = fgets ( $soubor , 8192 )) !== false ) {
