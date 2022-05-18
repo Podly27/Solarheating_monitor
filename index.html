@@ -77,7 +77,7 @@
     while (i < count) {
       var x = baseval;
       var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
-  
+ 
       series.push([x, y]);
       baseval += 86400000;
       i++;
@@ -188,25 +188,7 @@
           };
         }
 
-      
-
-        render() {
-          return (
-            <div>
-              <div id="wrapper">
-                <div id="chart-line2">
-                <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={230} />
-              </div>
-                <div id="chart-line">
-                <ReactApexChart options={this.state.optionsLine} series={this.state.seriesLine} type="area" height={130} />
-              </div>
-              </div>
-              <div id="html-dist"></div>
-            </div>
-          );
-        }
-      }
-
+   
       const domContainer = document.querySelector('#app');
       ReactDOM.render(React.createElement(ApexChart), domContainer);
     </script>
