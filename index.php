@@ -200,7 +200,7 @@
             data: [ <?php echo implode($cidlo2, ', '); ?>]
             },
           {
-            name: 'Bojler DO',
+            name: 'Bojler UP',
             //data: [110, 41, 35, 33, 51, 49, 62, 69, 91]
            data: [ <?php echo implode($cidlo3, ', '); ?>]
           }
