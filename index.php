@@ -94,7 +94,7 @@
   <body>
 
     <form action="index.php" method="get">
-    Datum : <input id="datum" name="datum" type="text" style="width: 80px;" maxlength="10" />
+    Date : <input id="datum" name="datum" type="text" style="width: 80px;" maxlength="10" />
     <input type="submit" value="zobrazit">
     </form>
 
@@ -118,7 +118,7 @@
         $soubor_pro_graf = "TextData_".$hodnoty[2].$hodnoty[1].$hodnoty[0].".log";
         }
 
-        echo 'Načítá se: <a href="./logs/'.$soubor_pro_graf.'">'.$soubor_pro_graf.'</a> <BR>';
+        echo 'Reading: <a href="./logs/'.$soubor_pro_graf.'">'.$soubor_pro_graf.'</a> <BR>';
         $soubor = $soubor_pro_graf;
 
 
