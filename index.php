@@ -189,21 +189,40 @@
     <script>
 
         var options = {
-          series: [{
-            name: "Kolektory",
+          series: [
+          {
+              name: 'Solar pump   ',
+              type: 'column',
+              data: [ <?php echo implode($cerpadlo, ', '); ?> ]
+            },
+            
+          {
+              name: 'Fireplace pump   ',
+              type: 'column',
+              data: [ <?php echo implode($topeni, ', '); ?> ]
+          },
+            
+          {
+            name: "Solar collector",
             //data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
            data: [ <?php echo implode($cidlo1, ', '); ?>]
             },
           {
-            name: "Bojler DW",
+            name: "Tank DW",
            // data: [10, 20, 41, 35, 51, 49, 62, 69, 91]
             data: [ <?php echo implode($cidlo2, ', '); ?>]
             },
           {
-            name: 'Bojler UP',
+            name: 'Tank UP',
             //data: [110, 41, 35, 33, 51, 49, 62, 69, 91]
            data: [ <?php echo implode($cidlo3, ', '); ?>]
-          }
+          }, 
+          {
+            name: "Fireplace",
+            //data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+           data: [ <?php echo implode($cidlo4, ', '); ?>]
+            },
+            
         ],
           chart: {
           height: 500,
@@ -212,14 +231,14 @@
             enabled: true
           },
         },
-        colors: ['#c336d1', '#000cff', '#ff3333'],
+        colors: ['#FF00FF', '#aaaaaa', '#800080', '#000cff', '#ff3333', '#555555'],
         dataLabels: {
           enabled: false
         },
         stroke: {
-          width: [2, 2, 2],
+          width: [2, 2, 2, 2, 2, 2],
           curve: 'straight',
-          dashArray: [0, 2, 2]
+          dashArray: [0, 0, 0, 2, 2, 2]
         },
         title: {
           text: 'Temperatures',
@@ -228,16 +247,16 @@
         legend: {
             position: 'top',
             horizontalAlign: 'center',
-            tooltipHoverFormatter: function(seriesName, opts) {
-        return seriesName + ' - <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>'
-            },
         },
-        markers: {
+        markers: { 
+            tooltipHoverFormatter: function(seriesName, opts) { return seriesName + ': <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>' },
           size: 0,
           hover: {
             sizeOffset: 6
           }
         },
+    
+        
         xaxis: {
             //categories: [ <?php echo $categories; ?>],
 
